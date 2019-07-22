@@ -232,11 +232,6 @@ function move() {
     }
   }
 
-  // console.log(snakeBody[0].getAttribute('posX'));
-  // console.log(snakeBody[0].getAttribute('posY'));
-
-  // console.log(mouse.getAttribute('posX'));
-
   //ЇМО МИШЕЙ
   // якщо змія потрапить на координати на яких знаходиться миша
 
