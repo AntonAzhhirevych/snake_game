@@ -8,7 +8,7 @@ document.body.appendChild(gamePlace);
 gamePlace.classList.add('gamePlace');
 
 // заповнюю площу для гри 100 квадратами
-for (let i = 1; i < 101; i += 1) {
+for (let i = 1; i < 901; i += 1) {
   //створюю
   const excel = document.createElement('div');
   //додаю в площу
@@ -23,10 +23,10 @@ for (let i = 1; i < 101; i += 1) {
 const excel = document.getElementsByClassName('excel');
 //базові координати
 let x = 1,
-  y = 10;
+  y = 30;
 //цикл для додавання координат
 for (let i = 0; i < excel.length; i += 1) {
-  if (x > 10) {
+  if (x > 30) {
     x = 1;
     y--;
   }
@@ -39,9 +39,12 @@ for (let i = 0; i < excel.length; i += 1) {
 // функція для отримання рандомних координатів
 function generateSnake() {
   //рандом на осях (Х,У)
-  let posX = Math.round(Math.random() * (10 - 3) + 3);
-  let posY = Math.round(Math.random() * (10 - 1) + 1);
+  let posX = Math.round(Math.random() * (30 - 3) + 3);
+  let posY = Math.round(Math.random() * (30 - 1) + 1);
   //повертаэмо масив з 2 рандомними числами
+  console.log(posX);
+  console.log(posY);
+
   return [posX, posY];
 }
 
@@ -80,8 +83,8 @@ let bomb;
 function createMouse() {
   function generateMouse() {
     //рандом на осях (Х,У)
-    let posX = Math.round(Math.random() * (10 - 3) + 3);
-    let posY = Math.round(Math.random() * (10 - 1) + 1);
+    let posX = Math.round(Math.random() * (30 - 3) + 3);
+    let posY = Math.round(Math.random() * (30 - 1) + 1);
     //повертаэмо масив з 2 рандомними числами
     return [posX, posY];
   }
@@ -120,8 +123,8 @@ createMouse();
 function createBomb() {
   function generateBomb() {
     //рандом на осях (Х,У)
-    let posX = Math.round(Math.random() * (10 - 3) + 3);
-    let posY = Math.round(Math.random() * (10 - 1) + 1);
+    let posX = Math.round(Math.random() * (30 - 3) + 3);
+    let posY = Math.round(Math.random() * (30 - 1) + 1);
     //повертаэмо масив з 2 рандомними числами
     return [posX, posY];
   }
@@ -172,7 +175,7 @@ function move() {
 
   if (direction === 'right') {
     //якщо координати по осі Х менше 10 робимо рух в право
-    if (snakeCoordinates[0] < 10) {
+    if (snakeCoordinates[0] < 30) {
       // отримаємо координати голови
       snakeBody.unshift(
         document.querySelector(
@@ -197,12 +200,12 @@ function move() {
       // якщо рівно 1 відсуваємо змію на позицію 10 по осі Х
     } else {
       snakeBody.unshift(
-        document.querySelector('[posX = "10"][posY = "' + snakeCoordinates[1] + '"]'),
+        document.querySelector('[posX = "30"][posY = "' + snakeCoordinates[1] + '"]'),
       );
     }
   } else if (direction === 'up') {
     //якщо координати по осі Х менше 10 робимо рух в право
-    if (snakeCoordinates[1] < 10) {
+    if (snakeCoordinates[1] < 30) {
       // отримаємо координати голови
       snakeBody.unshift(
         document.querySelector(
@@ -227,7 +230,7 @@ function move() {
       // якщо рівно 10 відсуваємо змію на позицію 1 по осі Х
     } else {
       snakeBody.unshift(
-        document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "10"]'),
+        document.querySelector('[posX = "' + snakeCoordinates[0] + '"][posY = "30"]'),
       );
     }
   }

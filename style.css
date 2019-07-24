@@ -3,7 +3,7 @@
 }
 
 body {
-  margin: 100px;
+  /* margin: 100px; */
 }
 
 .bomb {
@@ -11,19 +11,24 @@ body {
   border-radius: 50%;
 }
 
+.help {
+  background-color: red;
+  border-radius: 50%;
+}
+
 .gamePlace {
-  width: 500px;
-  height: 500px;
+  width: 750px;
+  height: 750px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  background-color: #ccc;
+  background-color: #424242;
 }
 
 .counter {
-  width: 100px;
+  /* width: 100px; */
   height: 100px;
-  background-color: green;
+  background-color: rgb(20, 161, 154);
   display: flex;
   justify-content: center;
 }
@@ -34,9 +39,9 @@ body {
 }
 
 .excel {
-  width: 50px;
-  height: 50px;
-  padding: 5px;
+  width: 25px;
+  height: 25px;
+  padding: 2.5px;
 }
 
 .snakeBody {
