@@ -151,8 +151,6 @@ function createBomb() {
 
   //додаємо клас для стильового оформлення
   bomb.classList.add('bomb');
-
-  //   console.log(mouseCoordinates);
 }
 
 createBomb();
